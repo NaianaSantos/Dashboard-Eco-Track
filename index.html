@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard Eco-Track</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5bd682e288.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div class="container">
+
+        <header>
+            <div class="cabecalho">
+                <img src="logo.png" alt="logo">
+                <h1>Dashboard <span class="destaque-texto">Eco</span>-Track</h1>
+            </div>
+        </header>
+        
+        <div class="main-layout">
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-microchip"></i>
+                            <span>Sensores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="area-conteudo">
+                <section class="texto-explicativo">
+                    <h3>Monitoramento Ambiental</h3>
+                    <p>O sistema Eco-Track é uma plataforma avançada de monitoramento em tempo real, 
+                    projetada para coletar e analisar diversos parâmetros ambientais essenciais. 
+                    Através de uma rede de sensores inteligentes, conseguimos medir a qualidade do ar, 
+                    níveis de umidade, temperatura e pureza do solo com precisão cirúrgica. 
+                    Nossa missão é fornecer dados acionáveis que permitam a tomada de decisões 
+                    sustentáveis e preventivas, garantindo um futuro mais resiliente e consciente.
+                    <br><br>
+                    Além da coleta de dados brutos, a interface processa informações complexas 
+                    e as transforma em relatórios visuais intuitivos. Cada sensor conectado 
+                    ao dashboard envia alertas automáticos sempre que um limite crítico é atingido, 
+                    permitindo uma resposta rápida a incidentes ambientais. Com o Eco-Track, 
+                    a gestão de recursos naturais torna-se digital, transparente e extremamente 
+                    eficiente para empresas e governos que buscam excelência em sustentabilidade.
+                </p>
+                </section>
+
+                <section class="log-atividade">
+
+                    <h2>Log de Atividade</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Data</th>
+                        <th>Sensor</th>
+                        <th>Status</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>2024-06-01 14:30</td>
+                        <td>Sensor 1</td>
+                        <td class="status-ativo">Ativo</td>
+                        <td>25.5°C</td>
+                    </tr>
+
+                    <tr>
+                        <td>2024-06-01 14:35</td>
+                        <td>Sensor 2</td>
+                        <td class="status-ativo">Ativo</td>
+                        <td>60% Umidade</td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-01 14:40</td>
+                        <td>Sensor 3</td>
+                        <td class="status-inativo">Inativo</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+                </section>
+
+               <section class="cadastro-sensor">
+
+                <h2>Cadastro de Novo Sensor</h2>
+
+                <form>
+                    <table class="form">
+                        <tr>
+                            <td colspan="2" class="linha"><label for="nome">Nome do Sensor</label>
+                            <input type="text" id="nome" name="nome" required></td>
+                        </tr>
+                        <tr>
+                            <th class="coluna"><label for="temperatura">Temperatura</label></th>
+                            <td><select id="temperatura" name="temperatura">
+                                <option value="umidade">Umidade</option>
+                                <option value="qualidade_ar">Calor</option>
+                                <option value="pureza_solo">Chuva</option>
+                            </select></td>
+                        </tr>
+
+                        <tr>
+                            <th class="coluna"><label for="status">Status</label></th>
+                            <td><select id="status" name="status">
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select></td>
+                        </tr>
+
+                        <tr>
+                            <td class="linha" colspan="2"><label for="localizacao">Localização</label>
+                            <input type="text" id="localizacao" name="localizacao" required></td>
+                        </tr>
+                    </table>
+
+                    
+                    <button type="submit" onclick="cadastroSensor()">Cadastrar Sensor</button>
+                    <button type="reset">Limpar</button>
+                </form>
+            </section>
+        </main>
+        </div>
+            <footer>
+                <p>&copy; 2026 Eco-Track. Todos os direitos reservados.</p>
+            </footer>
+    </body>
+</html>

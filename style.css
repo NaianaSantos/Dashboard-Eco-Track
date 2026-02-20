@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+  background-color: lightsteelblue;
+  width: 100%;
+}
+
+.cabecalho{
+    background-color: rgb(228, 233, 238);
+    height: 100px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cabecalho img{
+    width: auto;
+    height: 80px;
+}
+
+header h1{
+    font-family: Inter, sans-serif;
+    color: rgb(5, 5, 5);
+}
+
+.destaque-texto{
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+}
+.menu{
+    height: 100vh;
+    width: 200px;
+    background-color: rgb(98, 98, 109);
+    border-radius: 20px;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: Inter, sans-serif;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.menu a i{
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.menu ul li{
+    list-style: none;
+}
+
+.menu a:hover{
+    background-color: rgb(38, 38, 46);
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.main-layout{
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+.area-conteudo{
+    flex: 1;
+    padding-left: 30px;
+    width: auto;
+    min-width: 0; /* Evita que o conteúdo "estoure" o container */
+}
+
+.texto-explicativo{
+    columns: 2;
+    align-items: justify;
+    column-gap: 40px;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Inter, sans-serif;
+}
+
+.log-atividade{
+    padding-left: 30px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Inter, sans-serif;
+    padding: 30px;
+}
+
+.cadastro-sensor{
+    padding-left: 30px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Inter, sans-serif;
+    padding: 30px;
+    height: 90%;
+}
+
+table{
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid rgb(5, 5, 5);
+    border-collapse: separate;
+    border-spacing: 0;  
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.cadastro-sensor table{
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid rgb(5, 5, 5);
+    border-collapse: separate;
+    border-spacing: 0;  
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+table th{
+    background-color: skyblue;
+    text-align: left;
+}
+
+table th, table td{
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+    border-right: 1px solid rgba(0, 0, 0, 0.459);
+    overflow: hidden;
+}
+
+table tr:last-child td{
+    border-bottom: none;
+}
+
+table tr td:last-child{
+    border-right: none;
+}
+
+.form th{
+    background-color: rgba(255, 255, 255, 0.726);
+    text-align: left;
+    border-bottom: none;
+}
+
+.form td{
+    border: 1px solid rgba(128, 122, 122, 0.219);
+}
+
+.status-ativo{
+    color: green;
+    font-weight: bold;
+}
+
+.status-inativo{
+    color: red;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    width: 80%;
+    padding: 5px;
+    border: none;
+    background-color: aliceblue;
+}
+
+select{
+    width: 100%;
+    padding: 5px;
+    border: none;
+}
+
+button[type="submit"]{
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+button[type="reset"]{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(6, 138, 94);
+    transition: 0.3s;
+    color: black;
+}
+
+button[type="reset"]:hover{
+    background-color: rgb(230, 224, 224);
+    transition: 0.3s;
+    color: black;
+}
+
+.linha{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+    background-color: aliceblue;
+}
+
+.coluna{
+    background-color: white;
+    font-family: Inter, sans-serif;
+    width: 30%;
+}
+
+footer{
+    background-color: rgb(228, 233, 238);
+    text-align: center;
+    padding: 20px;
+    font-family: Inter, sans-serif;
+    color: rgb(5, 5, 5);
+    margin-top: 40px;
+}
+
+/* Configuração para Tablets e Celulares */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column; /* Coloca o menu em cima e o conteúdo em baixo */
+        padding: 10px;
+    }
+
+    .menu {
+        width: 100%; /* O menu passa a ocupar a largura toda */
+        height: auto; /* Deixa de ser 100vh para não ocupar a tela toda verticalmente */
+        margin-bottom: 20px;
+    }
+
+    .menu a {
+        margin-top: 10px; /* Diminui o espaço entre os itens no telemóvel */
+        justify-content: center; /* Centraliza os itens para ficar mais bonito */
+    }
+
+    .area-conteudo {
+        padding-left: 0; /* Remove o espaço lateral que existia quando o menu estava ao lado */
+        width: 100%;
+    }
+
+    .texto-explicativo {
+        columns: 1; /* Transforma o texto de 2 colunas para 1 (essencial para leitura em telemóvel) */
+    }
+
+    table, .cadastro-sensor table {
+        display: block;
+        overflow-x: auto; /* Cria uma barra de rolagem lateral se a tabela for muito larga */
+    }
+}
